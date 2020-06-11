@@ -1,5 +1,7 @@
 package io.muic.ooc.zork.command;
 
+import io.muic.ooc.zork.command.menu.ExitCommand;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,7 +22,6 @@ public final class CommandFactory {
 
     static {
         COMMAND_MAP.put("exit", new ExitCommand());
-        COMMAND_MAP.put("echo", new EchoCommand());
     }
 
     /**
