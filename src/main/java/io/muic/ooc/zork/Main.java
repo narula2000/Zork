@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 public class Main {
 
-
     /**
      * Runs the game.
      * @param args - Empty.
@@ -25,7 +24,7 @@ public class Main {
             Command command = CommandFactory.getCommand(words[0]);
             if (command != null) {
                 command.execute(
-                        words.length == 1 ? null : words[1],
+                        (words.length == 1) ? null : words,
                         state);
             }
         } while (true);

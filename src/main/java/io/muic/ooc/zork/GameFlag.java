@@ -7,7 +7,7 @@ public class GameFlag {
      *  true - Menu
      *  false - In-game
      */
-    private final boolean gameState = true;
+    private boolean gameState = true;
 
     /**
      * Get the current game state.
@@ -22,6 +22,7 @@ public class GameFlag {
      * @return - not gameState
      */
     public boolean changeState() {
-        return !gameState;
+        gameState = false;
+        return gameState;
     }
 }

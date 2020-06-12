@@ -6,8 +6,8 @@ public interface Command {
 
     /**
      * Override Method to run the command.
-     * @param arg - Command to execute.
+     * @param args - Command to execute.
      * @param state - State of the game.
      */
-    void execute(String arg, GameFlag state);
+    void execute(String[] args, GameFlag state);
 }
