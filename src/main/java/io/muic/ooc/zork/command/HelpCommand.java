@@ -1,6 +1,6 @@
 package io.muic.ooc.zork.command;
 
-import io.muic.ooc.zork.GameFlag;
+import io.muic.ooc.zork.Main;
 
 public class HelpCommand implements Command {
 
@@ -34,9 +34,11 @@ public class HelpCommand implements Command {
      * Print out all command and it's uses.
      * @param args  - Command to execute.
      * @param state - State of the game.
+     * @param player
+     * @param world
      */
     @Override
-    public void execute(final String[] args, final GameFlag state) {
+    public void execute(final String[] args, final Main.Status state, Player player, World world) {
         System.out.print(helpText);
     }
 }

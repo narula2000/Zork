@@ -4,6 +4,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 
 public class World {
+
+
     /**
      * Direction to travel.
      */
@@ -58,11 +60,20 @@ public class World {
 
     /**
      * Get the map to be use.
-     * @param thisMap - Map to fetch.
      * @param <T> - Hashmap.
+     * @param thisMap - Map to fetch.
      * @return - Map from the world.
      */
-    public <T extends Map<?>> T getMap(final Class<T> thisMap) {
+    public <T extends Map<?>> T getMap(final Map<?> thisMap) {
         return (T) this.map.get(thisMap);
+    }
+
+    /**
+     * Get map for class input.
+     * @param clazz - input of class.
+     * @return - map for the class.
+     */
+    public Map<?> getMap(Class<?> clazz) {
+        return this.map.get(clazz);
     }
 }

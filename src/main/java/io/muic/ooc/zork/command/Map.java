@@ -126,4 +126,7 @@ public class Map<S extends Serializable> {
         return this;
     }
 
+    public void enter(final Player player) {
+        System.out.println(player.currentDescription());
+    }
 }

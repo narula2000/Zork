@@ -37,30 +37,6 @@ public class Item {
     }
 
     /**
-     * Drop the item of the player and ad to the map.
-     * @param map - Map to add item too.
-     */
-    public void drop(final Map<?> map) {
-            map.addItem(this);
-            /*
-                TODO
-                remove item of the player.
-             */
-    }
-
-    /**
-     * Take item from the map.
-     * @param map - Map to remove item from.
-     */
-    public void take(final Map<?> map) {
-        map.removeItem(this);
-        /*
-        TODO
-        add item to player.
-         */
-    }
-
-    /**
      * Attack damage.
      * @return - Int of the damage
      */
@@ -77,5 +53,4 @@ public class Item {
         this.damage = power;
         return this;
     }
-
 }

@@ -1,7 +1,10 @@
 package io.muic.ooc.zork.command.menu;
 
-import io.muic.ooc.zork.GameFlag;
+import io.muic.ooc.zork.Main;
 import io.muic.ooc.zork.command.Command;
+import io.muic.ooc.zork.command.Player;
+import io.muic.ooc.zork.command.StartGround;
+import io.muic.ooc.zork.command.World;
 
 public class PlayCommand implements Command {
 
@@ -15,17 +18,17 @@ public class PlayCommand implements Command {
 
     /**
      * Override Method to run the command.
-     *
      * @param args  - Command to execute.
      * @param state - State of the game.
-     */
+     * @param player - Player Object.
+     * @param world - World Object
+     * */
     @Override
-    public void execute(final String[] args, final GameFlag state) {
-        if (state.getState()) {
-            /* TODO
-                Implement map file
-            */
-            state.changeState();
+    public void execute(final String[] args, Main.Status state, Player player, World world) {
+        if (state.equals(Main.Status.MENU)) {
+            player.setCurrentMap(world.getMap(StartGround.class));
+            player.getCurrentMap().enter(player);
+            state = Main.Status.PLAYING;
         } else {
             System.out.print(errorText);
         }

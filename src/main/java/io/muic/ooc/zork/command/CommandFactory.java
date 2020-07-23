@@ -1,6 +1,7 @@
 package io.muic.ooc.zork.command;
 
 import io.muic.ooc.zork.command.ingame.DropCommand;
+import io.muic.ooc.zork.command.ingame.InfoCommand;
 import io.muic.ooc.zork.command.menu.ExitCommand;
 import io.muic.ooc.zork.command.menu.PlayCommand;
 
@@ -27,6 +28,7 @@ public final class CommandFactory {
         COMMAND_MAP.put("drop", new DropCommand());
         COMMAND_MAP.put("help", new HelpCommand());
         COMMAND_MAP.put("play", new PlayCommand());
+        COMMAND_MAP.put("info", new InfoCommand());
     }
 
     /**
